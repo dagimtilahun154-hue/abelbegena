@@ -43,8 +43,8 @@ export default function Navbar() {
     >
       <div className={`mx-auto flex items-center justify-between transition-all duration-700 ${
         isScrolled 
-          ? `mx-4 sm:mx-8 xl:mx-auto mt-4 max-w-7xl bg-brand-yellow md:bg-brand-yellow/85 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-yellow/20 rounded-full h-16 px-6 lg:px-8`
-          : `mx-4 mt-4 bg-brand-yellow md:bg-transparent border border-brand-yellow/20 md:border-transparent rounded-full md:rounded-none md:mx-0 md:mt-0 w-auto md:w-full h-16 md:h-24 px-4 container`
+          ? `mx-4 sm:mx-8 xl:mx-auto mt-4 mb-2 max-w-7xl bg-brand-yellow/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-yellow/20 rounded-full h-16 px-6 lg:px-8`
+          : `mx-0 mt-0 bg-transparent border-transparent rounded-none w-full h-16 md:h-24 px-4 container`
       }`}>
         <Link to="/" className={`flex items-center gap-4 py-2 transition-all duration-700 ${
           isScrolled 
@@ -85,7 +85,7 @@ export default function Navbar() {
               className={`flex items-center gap-1.5 transition-all duration-700 p-2 px-3 rounded-full font-bold border hover:scale-105 active:scale-95 ${
                 isScrolled
                   ? "border-transparent text-brand-grey hover:bg-brand-yellow hover:text-brand-grey hover:shadow-md"
-                  : "bg-transparent border-brand-grey/20 text-brand-grey hover:bg-brand-yellow hover:border-brand-yellow hover:text-brand-grey hover:shadow-md"
+                  : "bg-white/50 backdrop-blur-sm border-white/30 text-brand-grey shadow-sm hover:bg-brand-yellow hover:border-brand-yellow hover:text-brand-grey hover:shadow-md"
               }`}
             >
               <Globe className="h-5 w-5" />
@@ -122,7 +122,7 @@ export default function Navbar() {
             </Button>
           </Link>
           <button 
-            className={`lg:hidden p-2 rounded-full transition-all border ${isScrolled ? "border-transparent text-brand-grey hover:bg-white/40" : "bg-transparent border-brand-grey/20 text-brand-grey hover:bg-white/10"}`}
+            className={`lg:hidden p-2 rounded-full transition-all duration-700 border ${isScrolled ? "border-transparent text-brand-grey hover:bg-white/40" : "bg-white/50 backdrop-blur-sm border-white/30 text-brand-grey shadow-sm hover:bg-white/70"}`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X /> : <Menu />}
