@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className={`mx-auto flex items-center justify-between transition-all duration-700 ${
         isScrolled 
-          ? `mx-4 sm:mx-8 xl:mx-auto mt-4 mb-2 max-w-7xl bg-brand-yellow/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-yellow/20 rounded-full h-16 px-6 lg:px-8`
+          ? `mx-4 sm:mx-8 xl:mx-auto mt-4 mb-[-10px] max-w-7xl bg-brand-yellow/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-yellow/20 rounded-full h-16 px-6 lg:px-8`
           : `mx-0 mt-0 bg-transparent border-transparent rounded-none w-full h-16 md:h-24 px-4 container`
       }`}>
         <Link to="/" className={`flex items-center gap-4 py-2 transition-all duration-700 ${
