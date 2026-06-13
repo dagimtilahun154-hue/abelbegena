@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 17%; /* #2C2C2C */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+
+    --primary: 47 100% 50%; /* #FFD700 */
+    --primary-foreground: 0 0% 17%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 17%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 47 100% 50%;
+    --accent-foreground: 0 0% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 47 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 17%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 17%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 17%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 47 100% 50%;
+    --primary-foreground: 0 0% 17%;
+
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 47 100% 50%;
+    --accent-foreground: 0 0% 17%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 47 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#f0f4f8] text-foreground font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: geometricPrecision;
+    letter-spacing: 0;
+  }
+  h1,
+  h2,
+  h3,
+  .font-serif {
+    letter-spacing: 0;
+  }
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .neo-flat {
+    background: #f0f4f8;
+    box-shadow: 6px 6px 16px #d1d9e6, -6px -6px 16px #ffffff;
+  }
+  .neo-pressed {
+    background: #f0f4f8;
+    box-shadow: inset 6px 6px 16px #d1d9e6, inset -6px -6px 16px #ffffff;
+  }
+  .neo-flat-white {
+    background: #ffffff;
+    box-shadow: 8px 8px 24px #e4ecf7, -8px -8px 24px #ffffff;
+  }
+  .neo-pressed-white {
+    background: #ffffff;
+    box-shadow: inset 6px 6px 16px #e4ecf7, inset -6px -6px 16px #ffffff;
+  }
+  .neo-btn {
+    @apply transition-all duration-200 active:scale-[0.98];
+    background: #f0f4f8;
+    box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #ffffff;
+  }
+  .neo-btn:hover {
+    box-shadow: 6px 6px 14px #d1d9e6, -6px -6px 14px #ffffff;
+  }
+  .neo-btn:active {
+    box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+  }
+}

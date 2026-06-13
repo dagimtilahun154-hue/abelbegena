@@ -1,0 +1,2 @@
+"""FastAPI face attendance backend."""
+
